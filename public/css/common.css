@@ -1,0 +1,51 @@
+body {
+	padding: 0;
+	font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
+section.body {
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+a {
+	color: black;
+}
+
+ul.ad_list {
+	margin: 0;
+	padding: 0;
+}
+
+.ad .swiper-container {
+	width: 100%;
+	height: 140px;
+}
+
+.ad > .swiper-container > .swiper-wrapper > .swiper-slide {
+	background-size: 100% auto;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.card-image {
+	background-size: 80% auto;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+
+.header_tabs > ul.nav {
+	line-height: 40px;
+}
+
+.header_tabs > ul.nav > li > a {
+	height: 100%;
+	display: inline-block;
+	width: 100%;
+	text-align: center;
+}
+
+.header_tabs > ul.nav > li > a.active.show {
+	color: #007aff;
+	font-weight: 700;
+}

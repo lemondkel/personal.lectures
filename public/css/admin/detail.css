@@ -1,0 +1,4 @@
+.card ul .list-group-item:hover, .card-body > a:hover {
+	color: #007bff;
+	cursor: pointer;
+}

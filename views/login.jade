@@ -1,0 +1,20 @@
+extends layout
+
+block css
+
+block js
+
+block content
+    .container
+        form(action='/process/login', method='POST')
+            .form-group
+                label(for="id") 아이디
+                input#id.form-control(name="id", type="text", aria-describedby="idHelp", placeholder="아이디를 입력해주세요.")
+                small#idHelp.form-text.text-muted 관리자 아이디를 입력해주세요.
+            .form-group
+                label(for="pw") 비밀번호
+                input#pw.form-control(name="pw", type="password", placeholder="비밀번호를 입력해주세요.")
+            .form-group.form-check
+                input#exampleCheck1.form-check-input(type="checkbox")
+                label.form-check-label(for="exampleCheck1") 정보 기억하기
+            button.btn.btn-info.btn-block(type="button", onclick='login()') 로그인

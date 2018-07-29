@@ -1,0 +1,18 @@
+doctype html
+html
+    head
+        meta(name="viewport", content="width=device-width, initial-scale=1")
+        title= title
+        link(rel='stylesheet', href='/library/bootstrap/bootstrap.min.css')
+        link(rel='stylesheet', href='/library/swiper/swiper.min.css')
+        script(type='text/javascript', src='/library/jquery-3.3.1.min.js')
+        script(type='text/javascript', src='/library/bootstrap/bootstrap.min.js')
+        script(type='text/javascript', src='/library/swiper/swiper.min.js')
+        link(rel='stylesheet', href='/css/common.css')
+        block css
+    body
+        section.body
+            include navigation
+            block content
+            script(type='text/javascript', src='/js/common.js')
+            block js

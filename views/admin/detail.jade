@@ -1,0 +1,27 @@
+extends ../layout
+
+block css
+    link(rel='stylesheet', href='/css/admin/detail.css')
+
+block js
+    script(type='text/javascript', src='/js/admin/detail.js')
+
+block content
+    h1
+        i(onclick='history.back()') 뒤로 가기
+    hr
+    .card(style="width: 100%;")
+        img.card-img-top(src="/images/test3.PNG" alt="강의 이미지", height='350px')
+        .card-body
+            h5.card-title #{lecture.title}
+            p.card-text
+                | #{lecture.text}
+        ul.list-group.list-group-flush
+            for item in lectureItemList
+                li.list-group-item(data-detail-id=item.idx) #{item.title}
+            if(lectureItemList.length == 0)
+                li.list-group-item 데이터가 없습니다.
+        .card-body
+            input(type='hidden', id='lectureIdx', value=lecture.idx)
+            a.card-link(href="#") 강의 수정
+            a.card-link(href="javascript:void(0)", onclick='goCreateLectureItem()') 차시 등록

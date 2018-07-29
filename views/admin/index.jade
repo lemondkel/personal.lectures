@@ -1,0 +1,35 @@
+extends ../layout
+
+block css
+    link(rel='stylesheet', href='/css/admin/index.css')
+
+block js
+    script(type='text/javascript', src='/js/admin/index.js')
+
+block content
+    h2 관리자 페이지
+    hr
+    h3 강의 목록
+        a.btn.btn-primary(href="javascript:goCreateLecture()") 강의 추가
+    ul.list-group.day_list
+        li.list-group-item.d-flex.justify-content-between.align-items-center(data-id='0', onclick='goDay(this)')
+            | 월요일
+            span.badge.badge-primary.badge-pill #{dayCount.day0}
+        li.list-group-item.d-flex.justify-content-between.align-items-center(data-id='1', onclick='goDay(this)')
+            | 화요일
+            span.badge.badge-primary.badge-pill #{dayCount.day1}
+        li.list-group-item.d-flex.justify-content-between.align-items-center(data-id='2', onclick='goDay(this)')
+            | 수요일
+            span.badge.badge-primary.badge-pill #{dayCount.day2}
+        li.list-group-item.d-flex.justify-content-between.align-items-center(data-id='3', onclick='goDay(this)')
+            | 목요일
+            span.badge.badge-primary.badge-pill #{dayCount.day3}
+        li.list-group-item.d-flex.justify-content-between.align-items-center(data-id='4', onclick='goDay(this)')
+            | 금요일
+            span.badge.badge-primary.badge-pill #{dayCount.day4}
+        li.list-group-item.d-flex.justify-content-between.align-items-center(data-id='5', onclick='goDay(this)')
+            | 토요일
+            span.badge.badge-primary.badge-pill #{dayCount.day5}
+        li.list-group-item.d-flex.justify-content-between.align-items-center(data-id='6', onclick='goDay(this)')
+            | 일요일
+            span.badge.badge-primary.badge-pill #{dayCount.day6}

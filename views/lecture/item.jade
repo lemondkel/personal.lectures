@@ -1,0 +1,18 @@
+extends ../layout
+
+block css
+    link(rel='stylesheet', href='/css/lecture/detail.css')
+
+block js
+
+block content
+    h1
+        i(onclick='history.back()') 뒤로 가기
+        | #{lectureItem.title}
+
+    div
+        div.youtube
+            iframe(id="ytplayer", type="text/html", width="100%", height="360",
+            src="http://www.youtube.com/embed/" + lectureItem.youtube + "?autoplay=1&origin=http://example.com", frameborder="0")
+        div.text
+            | #{lectureItem.text}

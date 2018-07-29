@@ -1,0 +1,8 @@
+.card-thumb {
+	height: 225px;
+	width: 100%;
+	display: block;
+	background-size: auto 85%;
+	background-repeat: no-repeat;
+	background-position: center;
+}

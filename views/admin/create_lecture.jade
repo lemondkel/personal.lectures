@@ -1,0 +1,36 @@
+extends ../layout
+
+block css
+    link(rel='stylesheet', href='/css/admin/index.css')
+
+block js
+    script(type='text/javascript', src='/js/admin/index.js')
+
+block content
+    h1
+        i(onclick='history.back()') 뒤로 가기
+        | 강의 추가
+    hr
+    .container
+        form(action='/admin/process/create/lecture', method='post')
+            .form-group
+                label(for="title") 제목
+                input#title.form-control(name='title', type="text", placeholder="제목을 입력해주세요.")
+            .form-group
+                label(for="thumbnail") 사진 (썸네일)
+                input#thumbnail.form-control(name='thumbnail', type="text", placeholder="제목을 입력해주세요.")
+            .form-group
+                label(for="daySelect") 요일 선택
+                select#daySelect.form-control(name='day')
+                    option(value='0') 월요일
+                    option(value='1') 화요일
+                    option(value='2') 수요일
+                    option(value='3') 목요일
+                    option(value='4') 금요일
+                    option(value='5') 토요일
+                    option(value='6') 일요일
+            .form-group
+                label(for="text") 소개
+                    textarea#text.form-control(name='text', rows="3")
+            .form-group
+                button.btn.btn-primary.btn-block(type='submit') 등록하기

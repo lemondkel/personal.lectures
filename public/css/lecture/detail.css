@@ -1,0 +1,9 @@
+.item_list > .card > .card-body {
+	padding-top: 0.5rem;
+	padding-bottom: 0.5rem;
+}
+
+.item_list > .card:hover {
+	background: #ddd;
+	cursor: pointer;
+}

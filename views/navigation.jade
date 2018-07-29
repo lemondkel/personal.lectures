@@ -1,0 +1,20 @@
+nav.navbar.navbar-expand-lg.navbar-dark.bg-primary
+    a.navbar-brand(href="/") 프로그래밍 강의목록
+    button.navbar-toggler(type="button" data-toggle="collapse" data-target="#navbarColor02" aria-controls="navbarColor02" aria-expanded="false" aria-label="Toggle navigation")
+        span.navbar-toggler-icon
+    #navbarColor02.collapse.navbar-collapse
+        ul.navbar-nav.mr-auto
+            li.nav-item.active
+                a.nav-link(href="/")
+                    | Home
+                    span.sr-only (current)
+            li.nav-item
+                a.nav-link(href="/about") About
+            if(user_id !== undefined)
+                li.nav-item
+                    a.nav-link(href="/admin/") Admin
+                li.nav-item
+                    a.nav-link(href="javascript:void(0)", onclick='logout()') Logout
+            else
+                li.nav-item
+                    a.nav-link(href="/login") Login

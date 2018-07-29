@@ -1,0 +1,93 @@
+ul.nav.nav-tabs
+    li.col
+        a.active.show(data-toggle="tab" href="#day1") 월
+    li.col
+        a(data-toggle="tab" href="#day2") 화
+    li.col
+        a(data-toggle="tab" href="#day3") 수
+    li.col
+        a(data-toggle="tab" href="#day4") 목
+    li.col
+        a(data-toggle="tab" href="#day5") 금
+    li.col
+        a(data-toggle="tab" href="#day6") 토
+    li.col
+        a(data-toggle="tab" href="#day7") 일
+.tab-content
+    #day1.tab-pane.fade.in.active.show
+        for item in day0
+            .card(data-id=item.idx)
+                .card-body
+                    .row
+                        .card-image.col-2(style='background-image: url("/images/test4.png")')
+                        .col-10
+                            h5.card-title #{item.title}
+                            p.card-text
+                                | #{item.text}
+                            a.btn.btn-primary(href="javascript:void(0)", onclick="goLectureDetail(this)") 수강하기
+    #day2.tab-pane.fade
+        for item in day1
+            .card(data-id=item.idx)
+                .card-body
+                    .row
+                        .card-image.col-2(style='background-image: url("/images/test4.png")')
+                        .col-10
+                            h5.card-title #{item.title}
+                            p.card-text
+                                | #{item.text}
+                            a.btn.btn-primary(href="javascript:void(0)", onclick="goLectureDetail(this)") 수강하기
+    #day3.tab-pane.fade
+        for item in day2
+            .card(data-id=item.idx)
+                .card-body
+                    .row
+                        .card-image.col-2(style='background-image: url("/images/test4.png")')
+                        .col-10
+                            h5.card-title #{item.title}
+                            p.card-text
+                                | #{item.text}
+                            a.btn.btn-primary(href="javascript:void(0)", onclick="goLectureDetail(this)") 수강하기
+    #day4.tab-pane.fade
+        for item in day3
+            .card(data-id=item.idx)
+                .card-body
+                    .row
+                        .card-image.col-2(style='background-image: url("/images/test4.png")')
+                        .col-10
+                            h5.card-title #{item.title}
+                            p.card-text
+                                | #{item.text}
+                            a.btn.btn-primary(href="javascript:void(0)", onclick="goLectureDetail(this)") 수강하기
+    #day5.tab-pane.fade
+        for item in day4
+            .card(data-id=item.idx)
+                .card-body
+                    .row
+                        .card-image.col-2(style='background-image: url("/images/test4.png")')
+                        .col-10
+                            h5.card-title #{item.title}
+                            p.card-text
+                                | #{item.text}
+                            a.btn.btn-primary(href="javascript:void(0)", onclick="goLectureDetail(this)") 수강하기
+    #day6.tab-pane.fade
+        for item in day5
+            .card(data-id=item.idx)
+                .card-body
+                    .row
+                        .card-image.col-2(style='background-image: url("/images/test4.png")')
+                        .col-10
+                            h5.card-title #{item.title}
+                            p.card-text
+                                | #{item.text}
+                            a.btn.btn-primary(href="javascript:void(0)", onclick="goLectureDetail(this)") 수강하기
+    #day7.tab-pane.fade
+        for item in day6
+            .card(data-id=item.idx)
+                .card-body
+                    .row
+                        .card-image.col-2(style='background-image: url("/images/test4.png")')
+                        .col-10
+                            h5.card-title #{item.title}
+                            p.card-text
+                                | #{item.text}
+                            a.btn.btn-primary(href="javascript:void(0)", onclick="goLectureDetail(this)") 수강하기

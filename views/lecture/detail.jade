@@ -1,0 +1,28 @@
+extends ../layout
+
+block css
+    link(rel='stylesheet', href='/css/lecture/detail.css')
+
+block js
+    script(type='text/javascript', src='/js/lecture/detail.js')
+
+block content
+    h1
+        i(onclick='history.back()') 뒤로 가기
+        | #{lecture.title}
+    div.item_list(data-id="1")
+        for item in lectureItemList
+            .card(data-detail-id="1", onclick='goDetailItem(this)')
+                .card-body
+                    .row
+                        .card-image.col-2(style='background-image: url("/images/test4.png")')
+                        .col-10
+                            h5.card-title #{item.title}
+                            p.card-text
+                                | #{item.updatedAt}
+        if(lectureItemList.length == 0)
+            .card
+                .card-body
+                    .row
+                        .col
+                            p 데이터가 없습니다.

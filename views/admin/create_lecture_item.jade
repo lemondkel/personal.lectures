@@ -1,0 +1,30 @@
+extends ../layout
+
+block css
+    link(rel='stylesheet', href='/css/admin/index.css')
+
+block js
+    script(type='text/javascript', src='/js/admin/index.js')
+
+block content
+    h1
+        i(onclick='history.back()') 뒤로 가기
+        | 강의-차시 추가
+    hr
+    .container
+        form(action='/admin/process/create/lecture/item', method='post')
+            input(type='hidden', name='lecture_idx' value=lectureIdx)
+            .form-group
+                label(for="title") 제목
+                input#title.form-control(name='title', type="text", placeholder="제목을 입력해주세요.")
+            .form-group
+                label(for="thumbnail") 사진 (썸네일)
+                input#thumbnail.form-control(name='thumbnail', type="text", placeholder="제목을 입력해주세요.")
+            .form-group
+                label(for="youtube") Youtube Link
+                input#youtube.form-control(name='youtube', type="text", placeholder="Youtube Link를 입력해주세요.")
+            .form-group
+                label(for="text") 소개
+                    textarea#text.form-control(name='text', rows="3")
+            .form-group
+                button.btn.btn-primary.btn-block(type='submit') 등록하기

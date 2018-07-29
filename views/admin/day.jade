@@ -1,0 +1,31 @@
+extends ../layout
+
+block css
+
+block js
+    script(type='text/javascript', src='/js/admin/detail.js')
+
+block content
+    h1
+        i(onclick='goAdminMain()') 뒤로 가기
+    hr
+    for items, index in lectureList
+        .list-group
+            if(index == 0)
+                a.list-group-item.list-group-item-action.flex-column.align-items-start.active(data-id=items.idx, href="javascript:void(0)", onclick='goAdminDetailItem(this)')
+                    .d-flex.w-100.justify-content-between
+                        h5.mb-1 #{items.title}
+                        small #{items.updatedAt}
+                    p.mb-1
+                        | #{items.text}
+                    small 부제목
+            else
+                a.list-group-item.list-group-item-action.flex-column(data-id=items.idx, href="javascript:void(0)", onclick='goAdminDetailItem(this)')
+                    .d-flex.w-100.justify-content-between
+                        h5.mb-1 #{items.title}
+                        small #{items.updatedAt}
+                    p.mb-1
+                        | #{items.text}
+                    small 부제목
+    if(lectureList.length == 0)
+        h2 데이터가 없습니다.
